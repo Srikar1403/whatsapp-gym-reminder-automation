@@ -1,44 +1,50 @@
 # WhatsApp Gym Reminder Automation 💬
 
-This project automatically sends WhatsApp reminders to users before their gym membership expires.
+An automated system that sends WhatsApp reminders to users before their gym membership expires using Google Sheets and Node.js.
 
 ## 🚀 Features
 
-* Automated daily checks using cron jobs
-* Google Sheets as database
-* WhatsApp messaging via whatsapp-web.js
-* No paid API required
+* Automated daily reminders using cron jobs
+* Google Sheets as a dynamic database
+* WhatsApp messaging without paid API
+* Real-time expiry tracking
 
 ## 🛠️ Tech Stack
 
 * Node.js
 * whatsapp-web.js
-* Google Sheets (CSV)
 * Axios
 * Node-cron
+* Day.js
 
 ## 📂 How It Works
 
-1. Fetch data from Google Sheets
-2. Parse expiry date
+1. Fetch data from Google Sheets (CSV)
+2. Parse user details (name, phone, expiry)
 3. Check if expiry is tomorrow
-4. Send WhatsApp message automatically
+4. Automatically send WhatsApp reminder
 
-## ⚙️ Setup
+## ⚙️ Setup Instructions
 
-```bash
-npm install
-node index.js
-```
+1. Install dependencies:
+   npm install
 
-## ⚠️ Note
+2. Run the project:
+   node index.js
 
-* Requires WhatsApp Web QR scan
-* Session stored locally
-* Needs system running 24/7 for automation
+3. Scan QR code to connect WhatsApp
 
-## 📌 Future Improvements
+## 💡 Real-world Use Case
 
-* Deploy on cloud (Railway/Render)
+This system helps gyms automate customer reminders, reducing manual effort and improving customer retention.
+
+## ⚠️ Limitations
+
+* Requires system to be running (not deployed)
+* Uses WhatsApp Web (not official API)
+
+## 🚀 Future Improvements
+
+* Deploy on cloud (Railway / Render)
 * Add admin dashboard
-* Use official WhatsApp API
+* Integrate WhatsApp Cloud API
